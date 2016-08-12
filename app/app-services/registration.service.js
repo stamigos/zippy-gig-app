@@ -17,7 +17,7 @@ function RegistrationService($http, $cookieStore, $rootScope, $timeout) {
     function Register(email, password, callback) {
         // forming registration request
         var request = {
-            url: 'http://127.0.0.1:5000/api/v1/auth/signup/',
+            url: 'http://212.24.111.125/api/v1/auth/signup/',
             method: "POST",
             data: {
                 'email': email,
