@@ -51,7 +51,7 @@ function HomeCtrl($scope, $http) {
 //        fileUpload.uploadFileToUrl(file, uploadUrl);
 //    };
     var request = {
-        url: 'http://212.24.111.125/api/v1/client/vendors/',
+        url: 'http://127.0.0.1:5000/api/v1/client/vendors/',
         method: 'GET',
         headers:{
             'Content-type':'application/json'

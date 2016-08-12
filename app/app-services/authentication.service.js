@@ -17,7 +17,7 @@ function AuthenticationService($http, $cookieStore, $rootScope, $timeout) {
     function Login(email, password, callback) {
         // forming authentication request
         var request = {
-            url: 'http://212.24.111.125/api/v1/auth/token/',
+            url: 'http://127.0.0.1:5000/api/v1/auth/token/',
             method: "POST",
             data: {
                 'email': email,
