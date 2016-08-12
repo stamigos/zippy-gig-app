@@ -1,0 +1,65 @@
+ <div class="by">
+        <div class="or">
+            <button type="button" class="ou collapsed" data-toggle="collapse" data-target="#navbar-collapse-main">
+                <span class="cv">Toggle navigation</span>
+                <span class="ov"></span>
+                <span class="ov"></span>
+                <span class="ov"></span>
+            </button>
+            <a class="e" href="#/vendors">
+                <img src="styles/img/logo.png" alt="brand">
+            </a>
+        </div>
+        <div class="f collapse" id="navbar-collapse-main">
+
+            <ul class="nav navbar-nav ss">
+                <li class="active">
+                    <a href="#/vendors">Vendors</a>
+                </li>
+                <!--<li>-->
+                    <!--<a data-toggle="modal" href="#msgModal">Messages</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="../docs/index.html">Docs</a>-->
+                <!--</li>-->
+            </ul>
+
+            <ul class="nav navbar-nav og ale ss">
+                <!--<li >-->
+                    <!--<a class="g" href="../notifications/index.html">-->
+                        <!--<span class="h ws"></span>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <li ng-show="globals.loggedIn != true">
+                    <a href="#/signin">Login</a>
+                </li>
+                <li ng-show="globals.loggedIn != true">
+                    <a href="#/signup">Register</a>
+                </li>
+                <li ng-show="globals.loggedIn == true">
+                    <button class="cg fm ox anl" data-toggle="popover">
+                        <img class="cu" src="../styles/img/avatar-dhg.png">
+                    </button>
+                </li>
+            </ul>
+
+            <!--<form class="ow og i" role="search">-->
+                <!--<div class="et">-->
+                    <!--<input type="text" class="form-control" data-action="grow" placeholder="Search">-->
+                <!--</div>-->
+            <!--</form>-->
+
+            <ul class="nav navbar-nav st su sv">
+                <li><a href="#/vendors">Vendors</a></li>
+                <!--<li><a href="../notifications/index.html">Notifications</a></li>-->
+                <!--<li><a data-toggle="modal" href="#msgModal">Messages</a></li>-->
+                <li><a href="#/profile">Profile</a></li>
+                <li><a href="#/logout" data-action="growl">Logout</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav hidden">
+                <li><a href="#/profile">Profile</a></li>
+                <li><a href="#/logout" data-action="growl">Logout</a></li>
+            </ul>
+        </div>
+    </div>

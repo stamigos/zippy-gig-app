@@ -1,0 +1,127 @@
+
+
+<!--<div class="by amt">-->
+    <div class="gz" style="width:75%;" ng-controller="VendorsCtrl">
+    <ul class="ca qo anx">
+
+        <li class="qf b aml" ng-repeat="vendor in vendorsList track by $index">
+            <a class="qj" href="#">
+                <img class="qh cu" src="styles/img/avatar-fat.jpg"/>
+            </a>
+            <div class="qg">
+                <div class="qn">
+                    <small class="eg dp vendor-in" ng-if="vendor.vendor_status == 1">in</small>
+                    <small class="eg dp vendor-out" ng-if="vendor.vendor_status == 2">out</small>
+                    <h5>{{ vendor.first_name }} {{ vendor.last_name }}</h5>
+                </div>
+
+                <p>
+                    <span style="padding-right: 5px;" ng-repeat="job_type in vendor.job_types track by $index"><button type="button" class="btn btn-info" job_type_id="{{ job_type.id }}">{{ job_type.title }}</button></span>
+                </p>
+
+                <div class="any" data-grid="images">
+                        <button type="button" style="float: right;" class="btn btn-default">Hire</button>
+                        <!--<img data-action="zoom" data-width="1050" data-height="700" src="styles/img/unsplash_1.jpg">-->
+
+                    <!--<div style="display: none">-->
+                        <!--<img data-action="zoom" data-width="640" data-height="640" src="styles/img/instagram_1.jpg">-->
+                    <!--</div>-->
+
+                    <!--<div style="display: none">-->
+                        <!--<img data-action="zoom" data-width="640" data-height="640" src="styles/img/instagram_13.jpg">-->
+                    <!--</div>-->
+
+                    <!--<div style="display: none">-->
+                        <!--<img data-action="zoom" data-width="1048" data-height="700" src="styles/img/unsplash_2.jpg">-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </li>
+    </ul>
+    </div>
+
+<div class="gn">
+    <div class="qv rc sm sp">
+        <div class="qw">
+                <div class="form-group">
+                    <label for="job_type">Job type</label>
+                    <select id="job_type" class="form-control" data-ng-model="selectedJobType">
+                        <option value="">--all--</option>
+                        <option ng-repeat="jobType in jobTypes" value="{{ jobType.id }}">{{ jobType.title }}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" class="form-control" data-ng-model="selectedStatus">
+                        <option value="">--all--</option>
+                        <option value="1">In</option>
+                        <option value="2">Out</option>
+                    </select>
+                </div>
+
+                <!--<input type="text" class="form-control" placeholder="Search vendors">-->
+                <div class="form-group">
+                    <button type="button" class="cg fm">
+                        <span ng-click="searchVendors()">Search</span>
+                    </button>
+                </div>
+        </div>
+    </div>
+</div>
+<!--</div>-->
+
+<!--<div ng-controller = "HomeCtrl">-->
+<!--<input type="file" file-model="myFile"/>-->
+<!--<button ng-click="uploadFile()">upload me</button>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--var myApp = angular.module('zippyGig', []);-->
+
+<!--myApp.directive('fileModel', ['$parse', function ($parse) {-->
+<!--return {-->
+<!--restrict: 'A',-->
+<!--link: function(scope, element, attrs) {-->
+<!--var model = $parse(attrs.fileModel);-->
+<!--var modelSetter = model.assign;-->
+
+<!--element.bind('change', function(){-->
+<!--scope.$apply(function(){-->
+<!--modelSetter(scope, element[0].files[0]);-->
+<!--});-->
+<!--});-->
+<!--}-->
+<!--};-->
+<!--}]);-->
+
+<!--myApp.service('fileUpload', ['$http', function ($http) {-->
+<!--this.uploadFileToUrl = function(file, uploadUrl){-->
+<!--var fd = new FormData();-->
+<!--fd.append('file', file);-->
+
+<!--$http.post(uploadUrl, fd, {-->
+<!--transformRequest: angular.identity,-->
+<!--headers: {'Content-Type': undefined}-->
+<!--})-->
+
+<!--.success(function(){-->
+<!--})-->
+
+<!--.error(function(){-->
+<!--});-->
+<!--}-->
+<!--}]);-->
+
+<!--myApp.controller('myCtrl', ['$scope', 'fileUpload', function($scope, fileUpload){-->
+<!--$scope.uploadFile = function(){-->
+<!--var file = $scope.myFile;-->
+
+<!--console.log('file is ' );-->
+<!--console.dir(file);-->
+
+<!--var uploadUrl = "/fileUpload";-->
+<!--fileUpload.uploadFileToUrl(file, uploadUrl);-->
+<!--};-->
+<!--}]);-->
+
+<!--</script>-->

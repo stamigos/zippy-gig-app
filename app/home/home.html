@@ -1,0 +1,107 @@
+<div class="by amt">
+<!--<div class="gz">-->
+    <ul class="ca qo anx" ng-controller="HomeCtrl">
+
+        <li class="qf b aml">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search vendors">
+                <div class="fj">
+                    <button type="button" class="cg fm">
+                        <span>Search</span>
+                    </button>
+                </div>
+            </div>
+        </li>
+
+        <li class="qf b aml" ng-repeat="vendor in vendorsList">
+            <a class="qj" href="#">
+                <img class="qh cu" ng-src="{{ vendor.avatar_url }}" >
+            </a>
+            <div class="qg">
+                <div class="qn">
+                    <small class="eg dp">Online</small>
+                    <h5>{{ vendor.first_name }} {{ vendor.last_name }}</h5>
+                </div>
+
+                <p>
+                    <span style="padding-right: 5px;" ng-repeat="job_type in vendor.job_types"><button type="button" class="btn btn-info">{{ job_type }}</button></span>
+                </p>
+
+                <div class="any" data-grid="images">
+                    <div style="display: none">
+                        <img data-action="zoom" data-width="1050" data-height="700" src="styles/img/unsplash_1.jpg">
+                    </div>
+
+                    <div style="display: none">
+                        <img data-action="zoom" data-width="640" data-height="640" src="styles/img/instagram_1.jpg">
+                    </div>
+
+                    <div style="display: none">
+                        <img data-action="zoom" data-width="640" data-height="640" src="styles/img/instagram_13.jpg">
+                    </div>
+
+                    <div style="display: none">
+                        <img data-action="zoom" data-width="1048" data-height="700" src="styles/img/unsplash_2.jpg">
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+<!--</div>-->
+</div>
+
+<!--<div ng-controller = "HomeCtrl">-->
+    <!--<input type="file" file-model="myFile"/>-->
+    <!--<button ng-click="uploadFile()">upload me</button>-->
+<!--</div>-->
+
+<!--<script>-->
+    <!--var myApp = angular.module('zippyGig', []);-->
+
+    <!--myApp.directive('fileModel', ['$parse', function ($parse) {-->
+        <!--return {-->
+            <!--restrict: 'A',-->
+            <!--link: function(scope, element, attrs) {-->
+                <!--var model = $parse(attrs.fileModel);-->
+                <!--var modelSetter = model.assign;-->
+
+                <!--element.bind('change', function(){-->
+                    <!--scope.$apply(function(){-->
+                        <!--modelSetter(scope, element[0].files[0]);-->
+                    <!--});-->
+                <!--});-->
+            <!--}-->
+        <!--};-->
+    <!--}]);-->
+
+    <!--myApp.service('fileUpload', ['$http', function ($http) {-->
+        <!--this.uploadFileToUrl = function(file, uploadUrl){-->
+            <!--var fd = new FormData();-->
+            <!--fd.append('file', file);-->
+
+            <!--$http.post(uploadUrl, fd, {-->
+                <!--transformRequest: angular.identity,-->
+                <!--headers: {'Content-Type': undefined}-->
+            <!--})-->
+
+                    <!--.success(function(){-->
+                    <!--})-->
+
+                    <!--.error(function(){-->
+                    <!--});-->
+        <!--}-->
+    <!--}]);-->
+
+    <!--myApp.controller('myCtrl', ['$scope', 'fileUpload', function($scope, fileUpload){-->
+        <!--$scope.uploadFile = function(){-->
+            <!--var file = $scope.myFile;-->
+
+            <!--console.log('file is ' );-->
+            <!--console.dir(file);-->
+
+            <!--var uploadUrl = "/fileUpload";-->
+            <!--fileUpload.uploadFileToUrl(file, uploadUrl);-->
+        <!--};-->
+    <!--}]);-->
+
+<!--</script>-->

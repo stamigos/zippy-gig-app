@@ -1,0 +1,129 @@
+<!--<!DOCTYPE html>-->
+<!--&lt;!&ndash;[if lt IE 7]>      <html lang="en" ng-app="zippyGig" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]&ndash;&gt;-->
+<!--&lt;!&ndash;[if IE 7]>         <html lang="en" ng-app="zippyGig" class="no-js lt-ie9 lt-ie8"> <![endif]&ndash;&gt;-->
+<!--&lt;!&ndash;[if IE 8]>         <html lang="en" ng-app="zippyGig" class="no-js lt-ie9"> <![endif]&ndash;&gt;-->
+<!--&lt;!&ndash;[if gt IE 8]>&lt;!&ndash;> <html lang="en" ng-app="zippyGig" class="no-js"> &lt;!&ndash;<![endif]&ndash;&gt;-->
+<!--<head>-->
+  <!--<meta charset="utf-8">-->
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+  <!--<title>My AngularJS App</title>-->
+  <!--<meta name="description" content="">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">-->
+  <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">-->
+  <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">-->
+  <!--<link rel="stylesheet" href="app.css">-->
+  <!--<script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>-->
+<!--</head>-->
+
+<!--<body>-->
+<!--<div class="container">-->
+  <!--<div class="header clearfix">-->
+    <!--<nav>-->
+      <!--<ul class="nav nav-pills pull-right">-->
+        <!--<li role="presentation" class="active"><a href="#home">Home</a></li>-->
+        <!--<li role="presentation"><a href="#signin">SignIn</a></li>-->
+        <!--<li role="presentation"><a href="#signup">SignUp</a></li>-->
+      <!--</ul>-->
+    <!--</nav>-->
+    <!--<h3 class="text-muted">AngularJS & Python</h3>-->
+  <!--</div>-->
+
+  <!--<div ng-view></div>-->
+
+  <!--<footer class="footer">-->
+    <!--<p>&copy; Company 2016</p>-->
+  <!--</footer>-->
+
+<!--</div>-->
+
+<!--<script src="bower_components/angular/angular.js"></script>-->
+<!--<script src="bower_components/angular-route/angular-route.js"></script>-->
+<!--<script src="app.js"></script>-->
+<!--<script type="text/javascript" src="home/home.js"></script>-->
+<!--<script src="signin/signin.js"></script>-->
+<!--<script src="signup/signup.js"></script>-->
+<!--<script src="components/version/interpolate-filter.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="zippyGig" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="zippyGig" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="zippyGig" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="zippyGig" class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>
+    Zippy Gig
+  </title>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link href="styles/css/toolkit.css" rel="stylesheet">
+  <link href="styles/css/application.css" rel="stylesheet">
+
+
+  <!--<style>-->
+    <!--/* note: this is a hack for ios iframe for bootstrap themes shopify page */-->
+    <!--/* this chunk of css is not part of the toolkit :) */-->
+    <!--body {-->
+      <!--width: 1px;-->
+      <!--min-width: 100%;-->
+      <!--*width: 100%;-->
+    <!--}-->
+  <!--</style>-->
+
+</head>
+
+
+<body class="ang">
+
+<div class="anq" id="app-growl"></div>
+<nav class="ck pc os app-navbar" ng-include="'home/navbar.html'"></nav>
+<!--<div ng-include="'home/navbar.html'"></div>-->
+<!--<div class="gb ut">-->
+  <div class="by amt" ng-view></div>
+<!--</div>-->
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="app.js"></script>
+<script src="app-services/authentication.service.js"></script>
+<script src="app-services/registration.service.js"></script>
+<script src="app-services/fileModel.service.js"></script>
+<script src="app-directives/fileModel.directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+
+<!--<script type="text/javascript" src="home/home.js"></script>-->
+<script type="text/javascript" src="vendors/vendors.js"></script>
+<script type="text/javascript" src="signin/signin.js"></script>
+<script type="text/javascript" src="signup/signup.js"></script>
+<script type="text/javascript" src="logout/logout.js"></script>
+<script type="text/javascript" src="profile/profile.js"></script>
+<!--<script src="styles/js/jquery.min.js"></script>-->
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="styles/js/chart.js"></script>
+<script type="text/javascript" src="styles/js/toolkit.js"></script>
+<script type="text/javascript" src="styles/js/application.js"></script>
+<script type="text/javascript">
+  // execute/clear BS loaders for docs
+//  $(function(){
+//    if (window.BS&&window.BS.loader&&window.BS.loader.length) {
+//      while(BS.loader.length){(BS.loader.pop())()}
+//    }
+//  })
+</script>
+</body>
+</html>
+
+
+<!-- Localized -->
