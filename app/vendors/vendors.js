@@ -59,7 +59,7 @@ function VendorsCtrl($scope, $http, $location) {
 
 
     var jobTypeRequest = {
-        url: 'http://127.0.0.1:5000/api/v1/client/job-types/',
+        url: 'http://212.24.111.125/api/v1/client/job-types/',
         method: 'GET',
         headers:{
             'Content-type':'application/json'
@@ -69,7 +69,7 @@ function VendorsCtrl($scope, $http, $location) {
     });
 
     var vendorsRequest = {
-        url: 'http://127.0.0.1:5000/api/v1/client/vendors/',
+        url: 'http://212.24.111.125/api/v1/client/vendors/',
         params: {
             job_type: $location.search().job_type,
             status:$location.search().status
