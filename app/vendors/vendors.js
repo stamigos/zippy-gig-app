@@ -50,11 +50,10 @@ function VendorsCtrl($scope, $http, $location) {
 //        console.log('fileUpload:', fileUpload)
 //        fileUpload.uploadFileToUrl(file, uploadUrl);
 //    };
-    console.log('location search:', $location.search());
     $scope.selectedJobType = $location.search().job_type;
     $scope.selectedStatus = $location.search().status;
     $scope.searchVendors = function() {
-        $location.url("/vendors").search({job_type: $scope.selectedJobType, status:$scope.selectedStatus});
+        $location.url("/vendors").search({job_type: $scope.selectedJobType, status: $scope.selectedStatus});
     };
 
 
